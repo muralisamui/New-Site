@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box } from '@mui/material'
+import NavBarMain from './components/NavBar/NavBar'
+import ControlledSpeedDial from './components/SpeedDial'
+import HomePage from './pages/HomePage'
+import AboutMe from './pages/AboutMe'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <></>
+    <>
+    <Box sx={{ paddingBottom: '40px', backgroundColor: 'rgb(240 242 245)' }}>
+        <NavBarMain />
+        <Box sx={{display:'flex',flexDirection:'column', gap:'40px'}}>
+          <HomePage />
+          <AboutMe />
+        </Box>
+          <ControlledSpeedDial />
+      </Box>
+    </>
   )
 }
 
